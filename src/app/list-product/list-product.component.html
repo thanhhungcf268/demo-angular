@@ -1,0 +1,17 @@
+<p>list-product works!</p>
+<table>
+  <tr>
+    <th>#</th>
+    <th>Name:</th>
+    <th>Price:</th>
+  </tr>
+  <tr *ngFor="let pr of products">
+    <td>{{pr.id}}</td>
+    <td (click)="show(pr)">{{pr.name}}</td>
+    <td>{{pr.price}}</td>
+    <td><button (click)="delete(pr)">delete</button></td>
+  </tr>
+</table>
+<div *ngIf="check">
+  <app-update-product [product]="product"></app-update-product>
+</div>

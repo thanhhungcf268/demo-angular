@@ -1,0 +1,19 @@
+<p>create-product works!</p>
+<button value="true" (click)="FCheck()" >Create</button>
+<div *ngIf="check">
+  <table>
+    <tr>
+      <th>Name:</th>
+      <td><input [(ngModel)]="product.name"></td>
+    </tr>
+    <tr>
+      <th>Price:</th>
+      <td><input [(ngModel)]="product.price" type="number"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><button (click)="FCheckS()">submit</button></td>
+    </tr>
+  </table>
+</div>
+
