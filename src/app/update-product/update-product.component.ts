@@ -1,4 +1,4 @@
-import {Component, Input, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {IProduct} from '../create-product/iproduct';
 import {Products} from '../list-product/products';
 
@@ -10,7 +10,8 @@ import {Products} from '../list-product/products';
 export class UpdateProductComponent implements OnInit {
   @Input() product?: IProduct;
   // product_: IProduct = {};
-  check?: boolean;
+  @Output() check1 = new EventEmitter();
+  check?: boolean = false;
 
   constructor() {
   }
@@ -20,6 +21,7 @@ export class UpdateProductComponent implements OnInit {
 
   update() {
     this.check = false;
+    this.check1.emit(this.check)
   }
 
 }

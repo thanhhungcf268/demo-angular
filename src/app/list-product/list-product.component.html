@@ -13,5 +13,5 @@
   </tr>
 </table>
 <div *ngIf="check">
-  <app-update-product [product]="product"></app-update-product>
+  <app-update-product (check1)="editCheck($event)" [product]="product"></app-update-product>
 </div>

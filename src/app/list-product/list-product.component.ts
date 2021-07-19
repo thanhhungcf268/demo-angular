@@ -10,8 +10,7 @@ import {Products} from './products';
 export class ListProductComponent implements OnInit {
   products: IProduct[] = Products;
   product?: IProduct;
-  @Input() check?: boolean = false;
-
+  check?: boolean = false;
   constructor() {
   }
 
@@ -30,5 +29,7 @@ export class ListProductComponent implements OnInit {
       }
     }
   }
-
+  editCheck(value){
+    this.check = value;
+  }
 }
